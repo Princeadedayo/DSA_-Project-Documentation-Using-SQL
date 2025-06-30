@@ -129,3 +129,12 @@ appropriately spent shipping costs based on the Order Priority? Explain your ans
 
 To assess product category performance, we utilize a query that consolidates the total
 sales and units sold per category. SQL query is as follows
+SELECT Top 1
+    Product_Category,
+    SUM([Sales]) AS Total_Sales
+FROM
+    [KMS Sql Case Study]
+GROUP BY
+    Product_Category
+ORDER BY
+    Total_Sales DESC
