@@ -9,7 +9,7 @@
 6. Business Insights and Recommendations
 7. Conclusion
 
-## Introduction
+# Introduction
 The purpose of this report is to demonstrate a comprehensive business intelligence (BI)
 analysis of inventory and order data for Kultra Mega Stores (KMS), a leading supplier of
 ofce supplies and furniture headquartered in Lagos, Nigeria. The analysis spans the period
@@ -27,7 +27,7 @@ extract key performance metrics, and nally, visualizing the results to inform bu
 recommendations. Although the actual dataset for KMS is assumed to be available in the
 company’s relational database, this report illustrates the methodology using hypothetical
 examples and sample SQL queries.
-## Data Understanding and Preparation
+### Data Understanding and Preparation
 Before any meaningful analysis can begin, it is essential to understand the underlying
 dataset and how it is structured. For this case study, we assume that the inventory and
 order data have been stored in a normalized relational database with the following key
@@ -52,21 +52,56 @@ where KMS serves its customer base.
 6. Shipping: Contains records related to shipping costs and logistical details that can affect
 prot margins.
 
-## Data Cleaning and Transformation Prior to analysis, the following data preparation steps are assumed:
+# Data Cleaning and Transformation Prior to analysis, the following data preparation steps are assumed:
 
-1. Handling Missing Values: In most real-world datasets, missing or erroneous entries are
+### Handling Missing Values:
+In most real-world datasets, missing or erroneous entries are
 common. Techniques such as imputation for missing shipping cost values or removal of
 records with critical missing elds are applied.
 
-2. Data Type Conversion: Date elds (e.g., order date) are converted to the appropriate
+### Data Type Conversion:
+Date elds (e.g., order date) are converted to the appropriate
 date format, and any currency or numeric elds are standardized.
 
-3. Normalization: The data has been normalized to avoid redundancy. For example, product
+### Normalization:
+The data has been normalized to avoid redundancy. For example, product
 categories are stored in a separate lookup table and linked via foreign keys.
 
-4. Aggregation Calculations: New elds such as “prot” for each order line (computed as
+### Aggregation Calculations:
+New elds such as “prot” for each order line (computed as
 unit price minus cost price, multiplied by quantity) are calculated to support protability
 analyses.
 
 By standardizing the structure and cleaning the dataset, the subsequent SQL queries can
 run efciently, and the output can be relied upon for further business insights.
+
+# Exploratory Data Analysis
+
+Exploratory Data Analysis (EDA) is a crucial step in comprehending trends, anomalies, and
+patterns inherent in the data. This stage informs the development of precise SQL queries
+and guides the construction of visualizations that reveal business driving factors.
+# Key Areas of Focus in EDA
+
+ ### Product Category Trends:
+An initial investigation into total sales by product category over the 2009–2012 period is
+performed. This helps identify if particular categories (e.g., ofce supplies versus
+furniture) are driving overall revenue. A preliminary aggregation of sales numbers and
+trends by month or quarter is carried out.
+
+### Regional Sales Analysis:  
+While KMS is headquartered in Lagos, the report pays special attention to regional
+performance trends, particularly comparing the Lagos region with the Abuja division.
+Variations in sales volume and revenue across different geographical areas provide
+insights on market penetration and area-specic factors.
+
+### Shipping Cost Impact:
+Shipping costs can have a major inuence on the prot margins of a business. By
+exploring the distribution of shipping costs against overall sales across different orders,
+the analysis identies if shipping expenses are disproportionately affecting certain
+customer segments or regions.
+
+### Customer Protability:
+Distinguishing between retail and wholesale customers, the analysis examines the
+protability per customer segment. For instance, certain customer types may yield
+higher margins despite lower volume orders, an insight that is critical for targeted
+marketing and customer retention strategies.
