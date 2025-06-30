@@ -125,3 +125,7 @@ purchase?
 Express Air is the fastest but the most expensive one, do you think the company
 appropriately spent shipping costs based on the Order Priority? Explain your answer
 
+## Which product category had the highest sales?
+
+To assess product category performance, we utilize a query that consolidates the total
+sales and units sold per category. SQL query is as follows
