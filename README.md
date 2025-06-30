@@ -209,11 +209,64 @@ GROUP BY
     [Ship_Mode]
 ORDER BY
     TotalShippingCost DESC;
+   
+   ## Visualization
 
 ![image](https://github.com/user-attachments/assets/d68c9c54-3677-4e30-a285-f54aa57a3c57)
 
     
-  ## Case Scenario II
+  # Case Scenario II
+
+  ## Who are the most valuable customers, and what products or services do they typically
+purchase?
+## Step 1...... Top 3 Most valuable customer
+
+SELECT top 3
+    customer_Name,
+    SUM([Sales]) AS Total_Sales,
+    SUM([Profit]) AS Total_Profit
+FROM
+    [KMS Sql Case Study]
+GROUP BY
+    Customer_Name
+ORDER BY
+    Total_Sales DESC
+    
+  ## Visualization
+
+  ![image](https://github.com/user-attachments/assets/a9e74786-da61-4bdf-a2cc-c5b76c60fde1)
+
+  ## Step 2..... Product they purchased 
+  
+  SELECT product_category,SUM(sales) AS total_sales                
+FROM [KMS Sql Case Study]
+
+GROUP BY product_category 
+ORDER BY total_sales DESC;
+
+## Visualization
+
+  ![image](https://github.com/user-attachments/assets/1fdacadd-da6d-479f-98ba-64880a8d88e5)
+
+  ##  Which small business customer had the highest sales?
+  
+  SELECT top 1
+    Customer_Name, 
+    SUM(Sales) AS Total_Sales
+FROM [KMS Sql Case Study]
+WHERE Customer_Segment = 'Small Business'
+GROUP BY [Customer_Name]
+ORDER BY Total_Sales DESC
+
+## Visualization
+
+![image](https://github.com/user-attachments/assets/25217526-3277-4dfb-8f0d-0e2449806b7f)
+
+  
+	
+
+  
+
 
    
     
