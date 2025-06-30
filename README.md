@@ -138,3 +138,96 @@ GROUP BY
     Product_Category
 ORDER BY
     Total_Sales DESC
+    
+### Visualization
+
+![1](https://github.com/user-attachments/assets/624676a3-68b9-4c7f-a94e-277ac212f203)  
+
+## Top 3
+
+## What are the Top 3 and Bottom 3 regions in terms of sales?
+SELECT top 3
+    Region,
+    SUM([Sales]) AS Total_Sales
+FROM
+    [KMS Sql Case Study]
+GROUP BY
+    Region
+ORDER BY
+    Total_Sales DESC
+    
+   ### Visualization 
+
+ ![image](https://github.com/user-attachments/assets/83887a1a-f940-4378-b896-d86b197152e4)
+
+## Bottom 3
+SELECT top 3
+    Region,
+    SUM(Sales) AS Total_Sales
+FROM
+    [KMS Sql Case Study]
+GROUP BY
+    Region
+ORDER BY
+    Total_Sales ASC
+    visulization
+    ![image](https://github.com/user-attachments/assets/0051c6fc-8e0a-42d3-acb9-892f24a23298)
+    
+## What were the total sales of appliances in Ontario?
+SELECT 
+    SUM([Sales]) AS Total_Sales_Appliances_Ontario
+FROM 
+   [KMS Sql Case Study]
+WHERE 
+    Product_Category = 'Appliances'
+    AND [Province] = 'Ontario';
+     
+### Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
+
+SELECT TOP 10
+    Customer_name,
+    SUM(Sales)AS Total_sales
+FROM
+    [KMS Sql Case Study]
+GROUP BY
+    Customer_Name
+ORDER BY
+    Total_sales ASC;
+   
+   ## Visualization
+
+   ![image](https://github.com/user-attachments/assets/a01e35a6-a300-42a9-ad8a-e8b30c60b3b1)
+
+## KMS incurred the most shipping cost using which shipping method?
+
+SELECT TOP 1
+    Ship_Mode Mode,
+    SUM([Shipping_Cost]) AS TotalShippingCost
+FROM
+    [KMS Sql Case Study]
+GROUP BY
+    [Ship_Mode]
+ORDER BY
+    TotalShippingCost DESC;
+
+![image](https://github.com/user-attachments/assets/d68c9c54-3677-4e30-a285-f54aa57a3c57)
+
+    
+  ## Case Scenario II
+
+   
+    
+
+    
+
+
+    
+
+    
+
+
+
+  
+
+
+
