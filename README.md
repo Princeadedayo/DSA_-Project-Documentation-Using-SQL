@@ -9,7 +9,7 @@
 6. Business Insights and Recommendations
 7. Conclusion
 
-# Introduction
+## Introduction
 The purpose of this report is to demonstrate a comprehensive business intelligence (BI)
 analysis of inventory and order data for Kultra Mega Stores (KMS), a leading supplier of
 ofce supplies and furniture headquartered in Lagos, Nigeria. The analysis spans the period
@@ -27,7 +27,7 @@ extract key performance metrics, and nally, visualizing the results to inform bu
 recommendations. Although the actual dataset for KMS is assumed to be available in the
 company’s relational database, this report illustrates the methodology using hypothetical
 examples and sample SQL queries.
-# Data Understanding and Preparation
+## Data Understanding and Preparation
 Before any meaningful analysis can begin, it is essential to understand the underlying
 dataset and how it is structured. For this case study, we assume that the inventory and
 order data have been stored in a normalized relational database with the following key
@@ -52,8 +52,7 @@ where KMS serves its customer base.
 6. Shipping: Contains records related to shipping costs and logistical details that can affect
 prot margins.
 
-#Data Cleaning and Transformation
-Prior to analysis, the following data preparation steps are assumed:
+## Data Cleaning and Transformation Prior to analysis, the following data preparation steps are assumed:
 
 1. Handling Missing Values: In most real-world datasets, missing or erroneous entries are
 common. Techniques such as imputation for missing shipping cost values or removal of
