@@ -262,7 +262,58 @@ ORDER BY Total_Sales DESC
 
 ![image](https://github.com/user-attachments/assets/25217526-3277-4dfb-8f0d-0e2449806b7f)
 
-  
+ ## Which Corporate Customer placed the most number of orders in 2009 – 2012?
+ SELECT top 1
+    "Customer_Name",
+    COUNT(DISTINCT "Order_ID") AS NumberOfOrders
+FROM
+   [KMS Sql Case Study]
+WHERE
+    "Customer_Segment" = 'Corporate'
+    AND "Order_Date" BETWEEN '2009-01-01' AND '2012-12-31'
+GROUP BY
+    "Customer_Name"
+ORDER BY
+    NumberOfOrders DESC
+
+## Visualization
+
+![image](https://github.com/user-attachments/assets/273518e0-1930-41e3-ba72-2fa208b1ae13)
+
+##  Which consumer customer was the most profitable one?
+
+SELECT top 1
+    "Customer_Name",
+    SUM(Profit) AS TotalProfit
+FROM
+    [KMS Sql Case Study]
+WHERE
+    "Customer_Segment" = 'Consumer'
+GROUP BY
+    "Customer_Name"
+ORDER BY
+    TotalProfit DESC
+
+## Visualization
+
+![image](https://github.com/user-attachments/assets/9d2690e1-e1d1-4704-862b-8bb6701e5481)
+
+## Which customer returned items, and what segment do they belong to?
+SELECT DISTINCT 
+    [Customer_Name], 
+    'Segment'
+FROM [dbo].[KMS Sql Case Study]
+WHERE Sales < 0; 
+
+select*from Order_Status
+
+## Visualization
+
+
+
+
+
+ 
 	
 
   
