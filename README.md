@@ -309,6 +309,21 @@ select*from Order_Status
 
 ## Visualization
 
+![image](https://github.com/user-attachments/assets/23afc067-a85b-4ae0-9323-3b6c6399953e)
+
+## If the delivery truck is the most economical but the slowest shipping method and
+Express Air is the fastest but the most expensive one, do you think the company
+appropriately spent shipping costs based on the Order Priority? Explain your answer
+
+SELECT order_priority, Ship_Mode, COUNT(*) AS order_count, AVG(shipping_cost) AS avg_shipping_c
+FROM [KMS Sql Case Study] 
+GROUP BY order_priority, ship_mode;
+
+## Visualiztion 
+
+![image](https://github.com/user-attachments/assets/5cbc98d6-1be4-4abf-a292-b09cc01cf722)
+
+
 
 
 
