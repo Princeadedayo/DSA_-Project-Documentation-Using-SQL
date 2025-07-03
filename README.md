@@ -7,6 +7,7 @@
 4. SQL Analysis and Query Development and Visualizations and Findings
 5. Business Insights and Recommendations
 6. Conclusion
+7. Tools used, [click here to download ](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
 # Introduction
 The purpose of this report is to demonstrate a comprehensive business intelligence (BI)
